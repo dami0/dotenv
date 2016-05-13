@@ -121,6 +121,7 @@ console.log(typeof config, config) // object { BASIC : 'basic' }
 The parsing engine currently supports the following rules:
 
 - `BASIC=basic` becomes `{BASIC: 'basic'}`
+- `export` statements are stripped: `export BASIC=basic` becomes `{BASIC: 'basic'}`
 - empty lines are skipped
 - lines beginning with `#` are treated as comments
 - empty values become empty strings (`EMPTY=` becomes `{EMPTY: ''}`)
